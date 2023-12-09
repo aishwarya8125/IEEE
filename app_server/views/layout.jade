@@ -1,0 +1,101 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title IEEE Anurag University Student Chapter
+
+    // Include Bootstrap CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+
+    // Include Roboto font
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto')
+
+    // Custom styles for the navigation bar and page background
+    style
+      body {
+        background: linear-gradient(to right, #ffffff, #87CEEB); // Gradient from white to light blue
+        font-family: 'Roboto', sans-serif; // Use Roboto font
+      }
+
+      .navbar-custom {
+        background: linear-gradient(to right, #87CEEB, #001f3f); // Gradient from light blue to dark blue
+        width: 100%; // Adjust the width as needed
+        margin: 0 auto; // Center the navigation bar
+      }
+
+      .navbar-custom .navbar-nav .nav-link {
+        color: #ffffff; // White text color for links
+        font-family: 'Roboto', sans-serif; // Use Roboto font for links
+        font-weight: bold; // Set font weight to bold
+      }
+
+      .navbar-custom .navbar-nav .nav-link.home,
+      .navbar-custom .navbar-nav .nav-link.faq,
+      .navbar-custom .navbar-nav .nav-link.contact,
+      .navbar-custom .navbar-nav .nav-link.chapters,
+      .navbar-custom .navbar-nav .nav-link.events {
+        color: #ffffff; // White text color for specific links
+      }
+
+      .navbar-custom .navbar-nav .nav-item.active .nav-link {
+        color: #ffd700; // Custom color for the active link, e.g., gold/yellow
+      }
+
+      .navbar-custom .navbar-brand {
+        color: #001f3f; // Dark blue text color for the brand
+        font-size: 1.5rem; // Adjust the font size as needed
+        font-weight: bold; // Set font weight to bold
+        font-family: 'Roboto', sans-serif; // Use Roboto font for the brand
+      }
+
+      .navbar-custom .navbar-brand img {
+        height: 30px; // Adjust the height of the IEEE logo as needed
+        margin-right: 10px; // Adjust the margin as needed
+      }
+
+      .navbar-custom .navbar-toggler-icon {
+        background-color: #ffffff; // Set the color of the "Chapters" button
+      }
+
+      .navbar-custom .navbar-toggler-text {
+        color: #001f3f; // Set the color of the "Chapters" text
+        font-weight: bold; // Set font weight to bold
+        margin-left: 5px; // Adjust the spacing as needed
+        font-family: 'Roboto', sans-serif; // Use Roboto font for the "Chapters" text
+      }
+
+  body
+    // Navigation Bar
+    nav.navbar.navbar-expand-lg.navbar-custom
+      .container
+        a.navbar-brand(href='#')
+          img(src='data:image/png;base64,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', alt='IEEE Logo') // Replace with the actual link to the IEEE logo
+          | IEEE Anurag University Student Chapter
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+          span.navbar-toggler-text
+            | Chapters
+        .collapse.navbar-collapse#navbarNav
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link.home(href='/') Home
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(href='#', id='navbarDropdown', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Chapters
+              .dropdown-menu(aria-labelledby='navbarDropdown')
+                a.dropdown-item(href='/chap1') Chapter 1
+                a.dropdown-item(href='chap2') Chapter 2
+                a.dropdown-item(href='/chap3') Chapter 3
+            li.nav-item
+              a.nav-link.events(href='/events') Events
+            li.nav-item
+              a.nav-link.contact(href='/contact') Contact Us
+            li.nav-item
+              a.nav-link.faq(href='/faq') FAQ
+
+    // Content goes here
+    block content
+
+    // Include jQuery and Bootstrap JS (without Popper.js)
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
